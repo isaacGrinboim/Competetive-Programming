@@ -1,0 +1,16 @@
+Description of the Algorithm:
+
+The algorithm uses dp to find the minimum difference between the maximum and minimum total weights of candies distributed to 3 groups. The DP keeps track of whether it is possible to achieve certain weight divisions using subsets of the candies. The table is iteratively updated as each candy is considered for inclusion in one of the three groups.
+
+________________________________________________________________________________________________
+Short Explanation of Correctness:
+
+With dynamic programming we go over all possible distributions of candies. Each candy can be added to only one of the three groups, the algorithm finds the distribution with the smallest difference between the maximum and minimum group weights. This guarantees that the solution is optimal.
+________________________________________________________________________________________________
+Time and Memory Complexity:
+
+Time Complexity:
+- dp updates: O(n*max(candy)^2)
+
+Memory Complexity:
+- dp table: O(max(candy)^2)

@@ -1,0 +1,16 @@
+Description of the Algorithm:
+We do a binary search on the possible ladder values. and return the minimum one possible. for each value we check whether last coordinate of the grid is reachable using this ladder size using BFS on the grid.____________________________________________________________________________________________________
+Short Explanation of Correctness:
+Binary search correctness is self explanatory. BFS is also.
+______________________________________________________________________________________
+Time and Memory Complexity
+Time Complexity:
+- each BFS: O(n*m)
+- maximum iterations of binary search: log(10^9)
+overall: O(log(10^9)*n*m)
+
+Memory Complexity:
+storing the grid and BFS: O(n*m)
+____________________________________________________________________________________________________
+Interesting Edge Cases:
+nothing special heree :)

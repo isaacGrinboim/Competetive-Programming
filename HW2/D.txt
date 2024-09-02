@@ -1,0 +1,24 @@
+Description of the Algorithm:
+For a test case:
+We sort the points with respect to x, then y. initiate res = maxInt.
+Then for each point i, from left to right, we do the following:
+For each of the next points j, we do:
+	if not already satisfied:
+	res = min(res,max(abs(x_i-x_j),abs(y_i-y_j)))
+____________________________________________________________________________________________________
+Short Explanation of Correctness:
+In induction, we make sure that each point i is not intersecting with any point after. and then we go to the (i+1) point.
+The condition is indeed correct because there is an intersection between point i and point j iff at both x and y of them has intersection, so it is enough to break it for the maximal coordinate.
+With to optimization of checking if the condition is already satisfied is true because of the sorting.
+____________________________________________________________________________________________________
+Time and Memory Complexity
+Time Complexity:
+- getting n points and sorting: O(nlog(n))
+- going through all points: O(n^2)
+overall: O(n^2)
+
+Memory Complexity:
+storing the points: O(n)
+____________________________________________________________________________________________________
+Interesting Edge Cases:
+nothing special heree :)
